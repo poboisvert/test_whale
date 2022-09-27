@@ -88,35 +88,40 @@ const Traffic = () => {
       }}
     >
       <div
-        id='traffic-light'
         style={{
           margin: '50px',
           padding: '10px 100px',
-          height: '100%',
-          border: `1px solid ${light.fontColor}`,
         }}
       >
         <div
-          className={`bulb ${light?.color === 'red' ? 'red' : '#111'}`}
-        ></div>
-        <div
-          className={`bulb ${light?.color === 'yellow' ? 'yellow' : '#111'}`}
-        ></div>
-        <div
-          className={`bulb ${light?.color === 'green' ? 'green' : '#111'}`}
-        ></div>
-        <div
+          id='traffic-light'
           style={{
-            display: 'flex',
+            height: '100%',
             width: '300px',
-            justifyText: 'center',
-            fontSize: '30px',
-            lineHeight: '35px',
-            fontWeight: 300,
-            color: light.fontColor,
+            border: `1px solid ${light.fontColor}`,
           }}
         >
-          {light.text}
+          <div
+            className={`bulb ${light?.color === 'red' ? 'red' : '#111'}`}
+          ></div>
+          <div
+            className={`bulb ${light?.color === 'yellow' ? 'yellow' : '#111'}`}
+          ></div>
+          <div
+            className={`bulb ${light?.color === 'green' ? 'green' : '#111'}`}
+          ></div>
+          <div
+            style={{
+              display: 'flex',
+              fontSize: '30px',
+              lineHeight: '35px',
+              fontWeight: 300,
+              color: light.fontColor,
+              justifyContent: 'center',
+            }}
+          >
+            {light.text}
+          </div>
         </div>
       </div>
     </div>
