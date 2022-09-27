@@ -45,7 +45,7 @@ const Traffic = () => {
   };
 
   const [light, setLight] = useState(getUpcoming('red'));
-  const [time, setTime] = useState(getUpcoming('green').timeout / 1000);
+  const [time, setTime] = useState(getUpcoming('red').timeout / 1000);
 
   const lightsManager = useCallback(() => {
     // decrease timer
@@ -66,7 +66,8 @@ const Traffic = () => {
       // Set new time from next color
       setTime(remaningTime);
     }, 1000);
-  }, [time, light.color]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [time]);
 
   useEffect(() => {
     lightsManager();
@@ -79,11 +80,11 @@ const Traffic = () => {
         border: `1px solid ${light.color}`,
         margin: '50px auto',
         width: '900px',
-        'flex-direction': 'column',
-        'justify-content': 'center',
-        'align-items': 'center',
-        'background-color': light.background,
-        'border-radius': '6px',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: light.background,
+        borderRadius: '6px',
       }}
     >
       <div
@@ -108,10 +109,10 @@ const Traffic = () => {
           style={{
             display: 'flex',
             width: '300px',
-            'justify-text': 'center',
-            'font-size': '30px',
-            'line-height': '35px',
-            'font-weight': 300,
+            justifyText: 'center',
+            fontSize: '30px',
+            lineHeight: '35px',
+            fontWeight: 300,
             color: light.fontColor,
           }}
         >
