@@ -78,9 +78,7 @@ const Traffic = () => {
       style={{
         display: 'flex',
         border: `1px solid ${light.color}`,
-        margin: '50px auto',
-        width: '900px',
-        flexDirection: 'column',
+        width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: light.background,
@@ -88,35 +86,44 @@ const Traffic = () => {
       }}
     >
       <div
-        id='traffic-light'
         style={{
+          display: 'flex',
+          flexDirection: 'column',
+          flex: 0.6,
           margin: '50px',
-          padding: '10px 100px',
-          height: '100%',
-          border: `1px solid ${light.fontColor}`,
         }}
       >
         <div
-          className={`bulb ${light?.color === 'red' ? 'red' : '#111'}`}
-        ></div>
-        <div
-          className={`bulb ${light?.color === 'yellow' ? 'yellow' : '#111'}`}
-        ></div>
-        <div
-          className={`bulb ${light?.color === 'green' ? 'green' : '#111'}`}
-        ></div>
-        <div
+          id='traffic-light'
           style={{
-            display: 'flex',
-            width: '300px',
-            justifyText: 'center',
-            fontSize: '30px',
-            lineHeight: '35px',
-            fontWeight: 300,
-            color: light.fontColor,
+            height: '100%',
+            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            border: `1px solid ${light.fontColor}`,
           }}
         >
-          {light.text}
+          <div
+            className={`bulb ${light?.color === 'red' ? 'red' : '#111'}`}
+          ></div>
+          <div
+            className={`bulb ${light?.color === 'yellow' ? 'yellow' : '#111'}`}
+          ></div>
+          <div
+            className={`bulb ${light?.color === 'green' ? 'green' : '#111'}`}
+          ></div>
+          <div
+            style={{
+              display: 'flex',
+              fontSize: '30px',
+              lineHeight: '35px',
+              fontWeight: 300,
+              color: light.fontColor,
+              justifyContent: 'center',
+            }}
+          >
+            {light.text}
+          </div>
         </div>
       </div>
     </div>
