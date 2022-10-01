@@ -78,9 +78,7 @@ const Traffic = () => {
       style={{
         display: 'flex',
         border: `1px solid ${light.color}`,
-        margin: '50px auto',
-        width: '900px',
-        flexDirection: 'column',
+        width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: light.background,
@@ -89,15 +87,19 @@ const Traffic = () => {
     >
       <div
         style={{
+          display: 'flex',
+          flexDirection: 'column',
+          flex: 0.6,
           margin: '50px',
-          padding: '10px 100px',
         }}
       >
         <div
           id='traffic-light'
           style={{
             height: '100%',
-            width: '300px',
+            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
             border: `1px solid ${light.fontColor}`,
           }}
         >
