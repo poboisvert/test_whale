@@ -79,24 +79,25 @@ export const Container = styled.div`
 export const Highlight = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: inherit;
   align-items: center;
   justify-content: space-between;
 
   @media only screen and (max-width: ${SCREENS.laptopL}) {
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    letter-spacing: -2px;
   }
   @media only screen and (max-width: ${SCREENS.tablet}) {
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    letter-spacing: -2px;
   }
   @media only screen and (max-width: ${SCREENS.mobileL}) {
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    white-space: nowrap;
+    letter-spacing: -2px;
   }
 `;
 
@@ -113,7 +114,7 @@ export const Text = styled.div`
   color: #ffffff;
   text-shadow: 5px 5px 20px #000000;
   &:nth-child(1) {
-    margin-right: 7px;
+    margin-right: 5px;
   }
 
   @media only screen and (max-width: ${SCREENS.laptopL}) {
