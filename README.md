@@ -17,7 +17,7 @@
           background: '#FFF2C5',
           border: '#FFCD1B',
           fontColor: '#8E7004',
-          timeout: 8000,
+          timeout: 4000,
         };
       case 'yellow':
         return {
@@ -26,7 +26,7 @@
           background: '#FFD3D3',
           border: '#FF1B1B',
           fontColor: '#930101',
-          timeout: 4000,
+          timeout: 8000,
         };
       case 'red':
         return {
@@ -36,6 +36,16 @@
           border: '#00D12E',
           fontColor: '#005012',
           timeout: 8000,
+        };
+
+      default:
+        return {
+          color: 'black',
+          text: 'No light match',
+          background: 'whitesmoke',
+          border: 'black',
+          fontColor: 'black',
+          timeout: 0,
         };
 ```
 
