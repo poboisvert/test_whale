@@ -6,6 +6,7 @@ export const Card = styled.div`
   flex-direction: column;
   flex: 1;
   height: 100%;
+  width: 100%;
 
   align-items: center;
   justify-content: flex-end;
@@ -13,7 +14,6 @@ export const Card = styled.div`
   margin: 0 20px;
 
   min-height: ${(props) => props.height || '400px'};
-  min-width: ${(props) => props.width || '400px'};
 
   background-image: url(${(props) => props.url || 'img/store/icecream.png'});
   background-color: #cccccc;
@@ -21,17 +21,21 @@ export const Card = styled.div`
   background-position: center center;
 
   @media only screen and (max-width: ${SCREENS.laptopL}) {
-    max-width: 950px;
-    padding: 0;
-    flex-direction: column;
+    margin-bottom: 20px;
+    width: inherit;
   }
+
+  @media only screen and (max-width: ${SCREENS.tabletL}) {
+    margin-bottom: 20px;
+    width: inherit;
+  }
+
   @media only screen and (max-width: ${SCREENS.tablet}) {
-    max-width: 700px;
-    padding: 0;
+    margin-bottom: 20px;
+    width: inherit;
   }
   @media only screen and (max-width: ${SCREENS.mobileL}) {
-    width: 390px !important;
-    padding: 0;
     margin-bottom: 20px;
+    width: inherit;
   }
 `;

@@ -1,14 +1,14 @@
 #traffic-light {
   background-color: #ffffff;
-  border-radius: 40px;
+  border-radius: 6px;
 }
 
 .bulb {
-  height: 150px;
-  width: 150px;
+  height: 24px;
+  width: 24px;
   background-color: #c4c4c4;
   border-radius: 50%;
-  margin: 25px auto;
+  margin: 16px auto;
   transition: background 500ms;
 
   /* CSS for text */
