@@ -5,28 +5,27 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 0.7;
-  //height: 100%;
   height: 930px;
 
   justify-content: center;
 
   @media only screen and (max-width: ${SCREENS.laptopL}) {
-    max-width: 950px;
-    flex-direction: column;
+    max-width: ${SCREENS.laptopL};
     padding: 0;
-    margin: 0;
+    margin-bottom: 20px;
+    width: inherit;
   }
   @media only screen and (max-width: ${SCREENS.tablet}) {
-    max-width: 700px;
-    flex-direction: column;
+    max-width: ${SCREENS.tablet};
     padding: 0;
-    margin: 0;
+    margin-bottom: 20px;
+    width: inherit;
   }
   @media only screen and (max-width: ${SCREENS.mobileL}) {
-    max-width: 390px;
-    flex-direction: column;
+    max-width: ${SCREENS.mobileL};
     padding: 0;
-    margin: 0;
+    margin-bottom: 20px;
+    width: inherit;
   }
 `;
 
@@ -51,9 +50,9 @@ export const Container = styled.div`
     padding: 0;
   }
   @media only screen and (max-width: ${SCREENS.mobileL}) {
-    width: 390px !important;
-    max-width: 390px;
+    width: 350px;
     padding: 0;
+    margin: 0 auto;
   }
 `;
 
@@ -63,7 +62,7 @@ export const Box = styled.div`
   width: 690px;
 
   margin: 65px;
-  padding: 30px;
+  padding: 40px;
 
   align-items: center;
   justify-content: space-between;
@@ -75,10 +74,18 @@ export const Box = styled.div`
     max-width: 950px;
     padding: 0;
     flex-direction: column;
+    font-size: 12px;
+
+    padding: 0 20px;
+    margin: 40px;
   }
   @media only screen and (max-width: ${SCREENS.tablet}) {
     max-width: 700px;
     padding: 0;
+    font-size: 12px;
+
+    padding: 0 20px;
+    margin: 40px;
   }
   @media only screen and (max-width: ${SCREENS.mobileL}) {
     width: 294px;
@@ -86,7 +93,7 @@ export const Box = styled.div`
 
     font-size: 12px;
 
-    padding: 0 30px;
+    padding: 0 20px;
     margin: 40px;
   }
 `;
@@ -121,10 +128,11 @@ export const Text = styled.div`
 
 export const Title = styled.h1`
   display: flex;
-  align-items: left;
   width: 100%;
 
+  align-items: left;
   text-align: left;
+
   font-weight: 400;
   font-size: 40px;
 

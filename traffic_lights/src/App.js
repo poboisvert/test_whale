@@ -8,10 +8,8 @@ const App = () => {
       style={{
         display: 'flex',
         margin: '0 auto',
-        width: '700px',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
+        width: '360px',
+        height: '306px',
       }}
     >
       <Traffic />

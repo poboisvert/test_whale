@@ -77,30 +77,33 @@ const Traffic = () => {
     <div
       style={{
         display: 'flex',
+        width: 'inherit',
         border: `1px solid ${light.color}`,
-        width: '100%',
+        backgroundColor: light.background,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: light.background,
         borderRadius: '6px',
+        boxSizing: 'border-box',
       }}
     >
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
-          flex: 0.6,
-          margin: '50px',
+          alignItems: 'center',
+          flex: 1,
+          marginTop: '50px',
         }}
       >
         <div
           id='traffic-light'
           style={{
-            height: '100%',
-            width: '100%',
+            height: '144px',
+            width: '74px',
             justifyContent: 'center',
             alignItems: 'center',
             border: `1px solid ${light.fontColor}`,
+            boxSizing: 'border-box',
           }}
         >
           <div
@@ -112,18 +115,20 @@ const Traffic = () => {
           <div
             className={`bulb ${light?.color === 'green' ? 'green' : '#111'}`}
           ></div>
-          <div
-            style={{
-              display: 'flex',
-              fontSize: '30px',
-              lineHeight: '35px',
-              fontWeight: 300,
-              color: light.fontColor,
-              justifyContent: 'center',
-            }}
-          >
-            {light.text}
-          </div>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            fontSize: '30px',
+            lineHeight: '35px',
+            fontWeight: 300,
+            color: light.fontColor,
+            justifyContent: 'center',
+            marginTop: '40px',
+            marginBottom: '37px',
+          }}
+        >
+          {light.text}
         </div>
       </div>
     </div>

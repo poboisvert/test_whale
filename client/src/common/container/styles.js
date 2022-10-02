@@ -13,19 +13,21 @@ export const Container = styled.div`
   max-width: 1435px;
 
   @media only screen and (max-width: ${SCREENS.laptopL}) {
-    max-width: 950px;
+    width: 700px;
     padding: 0;
     margin: 0 auto;
     flex-direction: column;
   }
-  @media only screen and (max-width: ${SCREENS.tablet}) {
-    max-width: 700px;
+  @media only screen and (max-width: ${SCREENS.tabletL}) {
+    width: 700px;
+    flex-direction: column;
     padding: 0;
   }
   @media only screen and (max-width: ${SCREENS.mobileL}) {
-    width: 390px !important;
-    max-width: 390px;
+    width: 350px;
+    flex-direction: column;
+
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
   }
 `;
