@@ -20,4 +20,6 @@ const Button = forwardRef(({ href, as, prefetch, ...props }, ref) => (
   </>
 ));
 
+Button.displayName = 'Button';
+
 export default Button;

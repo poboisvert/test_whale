@@ -55,10 +55,6 @@ export default function Meta({ title, description, keywords, author, url }) {
       />
       {author ? <meta name='author' content={author} /> : null}
       <link rel='canonical' href={config.base_url + url} />
-      <link
-        href='https://fonts.googleapis.com/css2?family=Roboto&display=swap'
-        rel='stylesheet'
-      />
     </Head>
   );
 }
