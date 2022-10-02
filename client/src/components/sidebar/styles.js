@@ -80,24 +80,23 @@ export const Highlight = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-
   align-items: center;
   justify-content: space-between;
 
   @media only screen and (max-width: ${SCREENS.laptopL}) {
     flex-direction: row;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
   }
   @media only screen and (max-width: ${SCREENS.tablet}) {
     flex-direction: row;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
   }
   @media only screen and (max-width: ${SCREENS.mobileL}) {
     flex-direction: row;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
